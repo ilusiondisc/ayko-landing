@@ -27,7 +27,7 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(94, 201, 249, 0.5), 0 0 90px rgba(160, 116, 212, 0.3);
             text-align: center;
             max-width: 600px;
-            width: 100%;
+            width: 90%;
             position: relative;
         }
 
@@ -82,6 +82,45 @@
             text-decoration: underline;
         }
 
+        /* Estilos responsivos para telas menores */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .discord-icon img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .container {
+                padding: 30px;
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .discord-icon img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
