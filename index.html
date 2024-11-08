@@ -14,8 +14,13 @@
 	<script type="text/javascript">!function(){var e=window.location.href,t=document.title,n=Date.now(),o=document.createElement("script");o.src="https://lp.ayko.gg/pixel-x-app/pxa-remote?url="+encodeURIComponent(e)+"&title="+t+"&time="+n,o.async=!0,document.head.appendChild(o)}();</script>
 	<script>
 	  // Initialize the agent on page load.
-	  const fpPromise = import('https://fpjscdn.net/v3/WuHkyFT8ueIQtdYiU1hP')
-	    .then(FingerprintJS => FingerprintJS.load())
+	  const fpPromise = import('https://ayko.gg/yGaPVUThSBKNoAwA/Aq8bTJO1n8DZYUUi?apiKey=WuHkyFT8ueIQtdYiU1hP')
+	    .then(FingerprintJS => FingerprintJS.load({
+	      endpoint: [
+	        "https://ayko.gg/yGaPVUThSBKNoAwA/TNXE8SK7YXW58CDh",
+	        FingerprintJS.defaultEndpoint
+	      ]
+	    }))
 	
 	  // Get the visitorId when you need it.
 	  fpPromise
