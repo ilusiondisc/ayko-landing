@@ -147,3 +147,43 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+.lpc-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.lpc-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.lpc-button.primary {
+    background: linear-gradient(135deg, #7289DA, #5865F2);
+    box-shadow: 0 4px 15px rgba(114, 137, 218, 0.2);
+}
+
+.lpc-button.secondary {
+    background: linear-gradient(135deg, #36393F, #2F3136);
+    box-shadow: 0 4px 15px rgba(47, 49, 54, 0.2);
+}
+
+.lpc-button:hover {
+    transform: translateY(-2px);
+}
+
+.lpc-button.primary:hover {
+    box-shadow: 0 6px 20px rgba(114, 137, 218, 0.3);
+}
+
+.lpc-button.secondary:hover {
+    box-shadow: 0 6px 20px rgba(47, 49, 54, 0.3);
+}
