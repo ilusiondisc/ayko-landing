@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Acesso Bloqueado</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #0d0d30;
+			color: #ffffff;
+			text-align: center;
+		}
+
+		.content {
+			background-color: #16163a;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(94, 201, 249, 0.2);
+			max-width: 500px;
+			width: 90%;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			background: linear-gradient(90deg, #5ec9f9, #a074d4);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		p {
+			font-size: 14px;
+			color: #acacbb;
+			margin-bottom: 30px;
+			line-height: 1.5;
+		}
+
+		.diagnostics {
+			position: relative;
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #0d0d30;
+			border-radius: 10px;
+			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+			margin-bottom: 30px;
+		}
+
+		.diagnostics span {
+			display: block;
+			font-size: 12px;
+			color: #acacbb;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
+		.copy-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			padding: 5px 10px;
+			font-size: 12px;
+			color: #ffffff;
+			background-color: #5ec9f9;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s, transform 0.2s;
+		}
+
+		.copy-btn:hover {
+			background-color: #3ca3c9;
+			transform: scale(1.05);
+		}
+
+		.btn-container {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			margin-top: 20px;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 14px;
+			color: #ffffff;
+			background-color: #5ec9f9;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s, transform 0.2s;
+			text-align: center;
+		}
+
+		.btn:hover {
+			background-color: #3ca3c9;
+			transform: scale(1.05);
+		}
+
+		@media (max-width: 480px) {
+			.btn-container {
+				flex-direction: column;
+			}
+		}
+	</style>
+	<script>
+		function copyDiagnostics() {
+			const diagnostics = document.querySelector('.diagnostics').innerText;
+			navigator.clipboard.writeText(diagnostics).then(() => {
+				alert('Informações copiadas para a área de transferência!');
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="content">
+		<h1>Acesso Bloqueado</h1>
+		<p>
+			Sua solicitação foi bloqueada pelo sistema de segurança do nosso site.
+			Se você acredita que isso foi um erro, entre em contato com o suporte e forneça as informações abaixo.
+		</p>
+		<div class="diagnostics">
+			<button class="copy-btn" onclick="copyDiagnostics()">Copiar</button>
+			<span><strong>IP do Cliente:</strong> ::CLIENT_IP::</span>
+			<span><strong>ID do Ray:</strong> ::RAY_ID::</span>
+			<span><strong>Localização Geográfica:</strong> ::GEO::</span>
+		</div>
+		<div class="btn-container">
+			<a href="mailto:ilusion@ayko.gg" class="btn">E-mail</a>
+			<a href="https://discord.gg/ayko" class="btn">Discord</a>
+		</div>
+	</div>
+</body>
+
+</html>
