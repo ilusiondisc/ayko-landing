@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificando Navegador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #0d0d30;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .content {
+      background-color: #16163a;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(94, 201, 249, 0.2);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #5ec9f9, #a074d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 14px;
+      color: #acacbb;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .challenge-box {
+      margin: 30px 0;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #ffffff;
+      background-color: #5ec9f9;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #3ca3c9;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .btn-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Verificando Seu Navegador</h1>
+    <p>
+      Estamos verificando seu navegador antes de permitir o acesso ao site. Este processo é automático e pode levar até
+      5 segundos.
+      <br>Por favor, aguarde.
+    </p>
+    <div class="challenge-box">
+      ::IM_UNDER_ATTACK_BOX::
+    </div>
+    <div class="btn-container">
+      <a href="https://support.cloudflare.com/hc/pt-br" target="_blank" class="btn">Saiba Mais</a>
+    </div>
+  </div>
+</body>
+
+</html>
